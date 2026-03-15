@@ -55,6 +55,10 @@ Existing law firm rankings (US News, Chambers, Martindale) are based on peer rep
 
 ### AHPI algorithm
 
+The AHPI algorithm was introduced in:
+
+> Mojon, A., Mahari, R., & Lera, S. C. (2025). Data-driven law firm rankings to reduce information asymmetry in legal disputes. *Nature Computational Science*. https://doi.org/10.1038/s43588-025-00899-2
+
 Every law firm $k$ receives a latent skill score $S_k$. Each case type $m$ has a defendant bias parameter $\epsilon_m$ fitted to the US legal system. The probability that plaintiff firm $A$ beats defendant firm $B$ in case type $m$ is:
 
 $$\rho_n(A) = \frac{1}{1 + \exp(-(S_A - (S_B + \epsilon_m)))}$$
@@ -258,3 +262,20 @@ scripts/
 **Intake-selectivity bias.** A firm's score reflects both litigation skill and which cases it chose to accept. The pairwise structure partially controls for opponent strength — a win against a higher-ranked firm is weighted more heavily — but does not correct for intake selectivity. Legal aid organizations and public interest firms are excluded from rankings because the model systematically underrates them: they accept cases regardless of difficulty, which suppresses their apparent win rate.
 
 **Binary outcome.** Outcomes are coded as plaintiff win (1) or defendant win (0). Damages amounts, partial wins, and settlements on remand are not captured.
+
+---
+
+## Citation
+
+If you use this project or the underlying methodology, please cite the original paper:
+
+```bibtex
+@article{mojon2025datadriven,
+  title   = {Data-driven law firm rankings to reduce information asymmetry in legal disputes},
+  author  = {Mojon, Alexandre and Mahari, Robert and Lera, Sandro Claudio},
+  journal = {Nature Computational Science},
+  year    = {2025},
+  doi     = {10.1038/s43588-025-00899-2},
+  url     = {https://doi.org/10.1038/s43588-025-00899-2}
+}
+```
