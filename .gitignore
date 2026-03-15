@@ -1,0 +1,33 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Database files
+*.db
+*.sqlite3
+*.sql.bak
+
+# Logs
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
